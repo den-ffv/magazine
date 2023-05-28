@@ -1,0 +1,27 @@
+.poster-conteiner {
+}
+.poster {
+  // .poster__title
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  // .poster__img
+
+  &__img {
+    max-height: 460px;
+    max-width: 370px;
+    margin: 0px 0px 16px 0px;
+  }
+  &__date {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    margin: 8px 0px 30px 0px;
+    color: #000000;
+  }
+}

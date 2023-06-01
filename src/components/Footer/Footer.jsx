@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
         <div className='footer__social-network'>
           <p>© Made by Pawel Gola - Powered by Webflow</p>
-          <div className='social-network'>
+          <div className=''>
             <li className='social-network__list'>
               <a href='https://www.instagram.com/' target='_blank'>
                 <img src={instagram_white} alt='instagram' />

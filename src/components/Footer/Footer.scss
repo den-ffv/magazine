@@ -1,9 +1,10 @@
 .footer {
   padding: 10px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   background: #000;
   color: #fff;
   &__conteiner-form {
-    margin: 110px 0px 110px 0px;
+    margin: 128px 0px 128px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,13 +17,14 @@
     text-transform: uppercase;
   }
   &__form {
+    margin: 36px 0px 0px 0px;
     display: flex;
   }
   &__form-input-email {
     width: 309px;
     height: 50px;
     background: #ffffff;
-    padding: 0px 0px 0px 12px;
+    padding: 0px 0px 0px 16px;
     font-size: 16px;
   }
   &__form-button {
@@ -38,10 +40,19 @@
   &__nav-content {
     display: flex;
     flex-wrap: wrap;
+    margin: 31px 0px 0px 0px;
     ul {
       width: 300px;
+      margin: 0px 0px 0px 58px;
+      &:first-child {
+        margin: 0px;
+      }
+
       li {
-        margin: 12px 0px 12px 0px;
+        margin: 0px 0px 26px 0px;
+        &:last-child {
+          margin: 0px;
+        }
       }
       a {
         font-weight: 400;
@@ -51,10 +62,93 @@
       }
     }
   }
-  &__social-network{
-    padding: 90px 0px 60px 0px;
+  &__social-network {
+    padding: 102px 0px 60px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .footer {
+    &__conteiner-form {
+      text-align: center;
+      margin: 60px 0px 60px 0px;
+      flex-direction: column;
+    }
+    &__form-title {
+      max-width: 650px;
+
+      font-size: 60px;
+
+      margin: 0px 0px 20px 0px;
+    }
+    &__nav {
+      flex-direction: column;
+      align-items: center;
+      .logo {
+        margin: 0px 0px 20px 0px;
+      }
+    }
+    &__nav-content {
+      justify-content: center;
+      ul {
+        width: 200px;
+        text-align: center;
+        &:last-child {
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 620px) {
+  .footer {
+    &__conteiner-form {
+      margin: 40px 0px 40px 0px;
+    }
+    &__form-title {
+      max-width: 480px;
+      font-size: 55px;
+      margin: 0px 0px 20px 0px;
+    }
+    &__nav-content {
+      display: block;
+      text-align: center;
+      ul {
+        width: 150px;
+        text-align: center;
+        margin: 20px 0px 0px 0px;
+        &:last-child {
+          margin: 20px 0px 0px 0px;
+        }
+      }
+    }
+    &__form {
+      display: block;
+    }
+    &__form-input-email {
+      width: 289px;
+    }
+    &__form-button {
+      display: flex;
+      justify-content: end;
+      margin: 12px 0px 0px 0px;
+    }
+    &__social-network {
+      padding: 50px 0px 60px 0px;
+      display: block;
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        margin: 0px 0px 20px 0px;
+      }
+    }
   }
 }

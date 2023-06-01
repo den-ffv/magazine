@@ -10,7 +10,7 @@ function Poster() {
       <p className='poster__date'>10/2023</p>
       <div>
         <Link to={"/"}>
-        <img className='poster__img' src={poster} alt='img poster' />
+        <img className="poster__img" src={poster} alt='img poster' />
         </Link>
       </div>
       <button className='button'>BUtton</button>

@@ -7,17 +7,17 @@ function HomePost() {
     <Link to={"/fullpost"}>
       <div className='home-post-conteiter'>
         <img src={homePost} alt='img home post' />
-        <div className='text-content'>
+        <div className='home-post-content'>
           <div>
             <h2 className='home-post__title'>Hope dies last</h2>
-            <p className='home-post__paragraph'>
+            <p className='home-post__paragraph text-content__paragraph'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui
               vivamus arcu felis bibendum ut. Porttitor leo a diam.
             </p>
           </div>
-          <div className='text-content__information-post'>
+          <div className='text-content__information-post home-post-information-post'>
             <div>
               <p>
                 <span>Text</span>Jakob Gronberg
@@ -26,7 +26,7 @@ function HomePost() {
                 <span>Date</span>16. March 2022
               </p>
               <p>
-                <span>Duration</span>1 Min
+                <span>Read</span>1 Min
               </p>
             </div>
             <div>

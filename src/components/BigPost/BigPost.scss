@@ -1,64 +1,101 @@
 .big-post {
-  margin: 75px 0px 50px 0px;
+  margin: 85px 0px 50px 0px;
   color: #000;
-  // .big-post__conteiner
 
   &__conteiner {
-    
   }
-
-  // .big-post__content
 
   &__content {
     display: flex;
     margin: 0px 0px 48px 0px;
   }
-
-  // .big-post__img
-
   &__img {
     width: 100%;
   }
 }
 .big-title {
   font-size: 104px;
+  line-height: 110%;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .text-content {
   max-width: 735px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0px 0px 0px 45px;
-  // .text-content__paragraph
-
+  padding: 7px 0px 0px 0px;
   &__paragraph {
     font-size: 18px;
+    line-height: 180%;
     padding: 0px 0px 15px 0px;
   }
-
-  // .text-content__information-post
 
   &__information-post {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    div{
+    margin: 0px 0px 28px 0px;
+    div {
       display: flex;
     }
-    p{
+    p {
       margin: 0px 24px 0px 0px;
-      span{
+      &:last-child{
+        margin: 0;
+      }
+      span {
         font-weight: 700;
         margin: 0px 8px 0px 0px;
       }
     }
   }
-  &__tag{
+  &__tag {
     border-radius: 100px;
-    padding: 8px 12px;
+    padding: 8px 9px;
     border: 1px solid #000;
-    text-transform:uppercase ;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 950px) {
+  .big-post {
+    text-align: center;
+    margin: 25px 0px 50px 0px;
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  .big-title {
+    font-size: 74px;
+    margin: 0px 0px 20px 0px;
+  }
+  .text-content {
+    padding: 0px;
+    &__information-post {
+      flex-direction: column;
+      div {
+        margin: 0px 0px 10px 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .text-content {
+    &__information-post {
+      div {
+        flex-direction: column;
+      }
+      p {
+        margin: 0px 0px 10px 0px;
+      }
+    }
+  }
+  .big-title{
+    font-size: 50px;
   }
 }

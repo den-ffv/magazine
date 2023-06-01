@@ -12,7 +12,7 @@ function Popular() {
             <h3 className='popular__title'>Street art festival</h3>
             <div className='text-content__information-post'>
               <p>
-                <span>Text</span>Jakob Gronberg
+                <span>Text</span>Cristofer Vaccaro
               </p>
             </div>
           </div>

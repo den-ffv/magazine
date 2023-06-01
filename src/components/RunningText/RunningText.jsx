@@ -1,26 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "../RunningText/RunningText.scss";
 
-function RunningText({text, repeatCount}) {
-
- 
-
-  
-  const repeatedText = Array(repeatCount).fill(text)
-
-
-  console.log(repeatedText)
+function RunningText({ text, repeatCount }) {
+  const repeatedText = Array(repeatCount).fill(text);
 
   return (
     <div className='running-text-container'>
       <div className='running-text-content'>
-        {repeatedText.map((item, index) => <p key={index}>{item}</p>)}
-
-
-
-        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit +++</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit +++</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit +++</p> */}
+        {repeatedText.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
       </div>
     </div>
   );

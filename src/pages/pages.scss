@@ -44,6 +44,84 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+//=========== magazine pages=========
+
+.magazine-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0px 70px 0px;
+  p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  &__sort {
+    display: flex;
+    a {
+      margin: 0px 0px 0px 12px;
+    }
+  }
+}
+.magazine-posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.magazine-next-btn {
+  display: flex;
+  justify-content: end;
+  margin: 96px 0px 192px 0px;
+}
+
+// ========authors page========
+
+.authors-page-wrapper {
+  margin: 44px 0px 117px 0px;
+}
+.podcast-page-wrapper {
+  margin: 140px 0px 119px 0px;
+}
+
+@media (max-width: 1150px) {
+  .magazine-posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 670px) {
+  .magazine-categories {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 20px 0px;
+    p {
+      padding: 0px 0px 10px 0px;
+    }
+    &__sort {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      a {
+        margin: 0px 12px 10px 0px;
+      }
+    }
+  }
+  .magazine-posts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .magazine-next-btn {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0px 10px 0px;
+  }
+  .podcast-page-wrapper {
+    margin: 40px 0px 55px 0px;
+  }
+}
+
 @media (max-width: 990px) {
   .flex-wrapper {
     flex-direction: column-reverse;
@@ -69,7 +147,6 @@ a {
       margin: 92px 0px 0px 0px;
       display: flex;
       flex-direction: column;
-
     }
   }
 }

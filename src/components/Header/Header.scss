@@ -96,8 +96,7 @@
         bottom: 0;
       }
     }
-    &.active,
-    .menu-icon__cheeckbox:checked + div {
+    & .active,.menu-icon__cheeckbox:checked + div {
       span {
         &:first-of-type {
           transform: rotate(45deg);

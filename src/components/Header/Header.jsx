@@ -58,7 +58,7 @@ function Header() {
           {/* <div className='menu__button'>
             <button onClick={() => setMenuActive(!menuActive)}>open</button>
           </div> */}
-          <div class='menu-icon'>
+          <div class={!menuActive ? 'menu-icon': 'menu-icon active'}>
             <input onClick={() => setMenuActive(!menuActive)} class='menu-icon__cheeckbox' type='checkbox' />
             <div>
               <span></span>

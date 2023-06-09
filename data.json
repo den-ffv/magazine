@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "Hope dies last",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.",
+    "tag": "art",
+    "createdAt": "2023-03-31T19:50:07.016+00:00",
+    "image": "home-post.png",
+    "author": {
+      "user": "1A642"
+    }
+  },
+  {
+    "id": 2,
+    "image": "home-post2.png",
+    "text": "Текст 2",
+    "author": "Автор 2"
+  },
+  {
+    "id": 3,
+    "image": "image3.jpg",
+    "text": "Текст 3",
+    "author": "Автор 3"
+  }
+]

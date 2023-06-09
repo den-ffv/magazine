@@ -4,7 +4,7 @@ import homePost from "../../img/home-post.png";
 import { Link } from "react-router-dom";
 function HomePost() {
   return (
-    <Link to={"/fullpost"}>
+    <Link to={"/full-post"}>
       <div className='home-post-conteiter'>
         <img src={homePost} alt='img home post' />
         <div className='home-post-content'>

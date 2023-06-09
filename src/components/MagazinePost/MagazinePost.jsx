@@ -4,7 +4,7 @@ import "./MagazinePost.scss";
 import homePost from "../../img/home-post.png";
 function MagazinPost() {
   return (
-    <Link to={"/fullpost"}>
+    <Link to={"/full-post"}>
       <div className='magazine-post-conteiter'>
         <div className='text-content__information-post home-post-information-post'>
           <div>

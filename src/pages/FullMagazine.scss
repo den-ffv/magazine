@@ -1,0 +1,204 @@
+.full-post {
+  margin: 100px 0px 200px 0px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 98px 0;
+  }
+  &__title {
+    max-width: 700px;
+  }
+  &__paragraph {
+    max-width: 707px;
+    font-size: 20px;
+    padding: 0px 0px 25px 0px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 180%;
+  }
+  &__img {
+    width: 100%;
+    max-height: 880px;
+  }
+  &__text-content {
+    display: flex;
+    justify-content: center;
+    margin: 95px 0px 175px 0px;
+  }
+  &__text-conteinrt {
+    max-width: 616px;
+    margin: 5px 0px 0px 0px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+  }
+  &__quote {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    position: relative;
+    margin: 49px 0px 10px 0px;
+    padding: 0px 0px 37px 0px;
+    p {
+      padding: 50px 0px 0px 68px;
+    }
+    &::before {
+      content: "“";
+      position: absolute;
+      font-size: 96px;
+      top: 70px;
+    }
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      margin: 10px 0px 0px 68px;
+    }
+  }
+  &__author {
+    max-width: 320px;
+    margin: 10px 65px 0px 0px;
+  }
+  &__social-network {
+    display: flex;
+  }
+  &__author-card {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 40px 0px;
+    padding: 0px 0px 26px 0px;
+    border-bottom: 1px solid #000;
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 0px 16px 0px 0px;
+      border-radius: 50%;
+    }
+    h2 {
+      margin: 0px 0px 16px 0px;
+    }
+  }
+  .home-author-card__contetn {
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 0px 28px 0px;
+      font-size: 16px;
+    }
+    span {
+      font-weight: 700;
+      margin: 0px 10px 0px 0px;
+    }
+    .full-post__social-network {
+      p {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 30px 0px;
+        font-size: 16px;
+      }
+      span {
+        margin: 0px 0px 0px 0px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+@media (max-width: 920px) {
+  .full-post {
+    margin: 50px 0px 100px 0px;
+    &__paragraph {
+      max-width: 707px;
+      font-size: 16px;
+      padding: 0px 0px 25px 0px;
+    }
+    &__img {
+      width: 100%;
+      max-height: 880px;
+    }
+    &__text-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0px 75px 0px;
+    }
+    &__text-conteinrt {
+      max-width: 616px;
+      margin: 5px 0px 0px 0px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+    &__quote {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 120%;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      position: relative;
+      margin: 10px 0px 10px 0px;
+      padding: 0px 0px 17px 0px;
+      p {
+        padding: 25px 0px 0px 28px;
+      }
+      &::before {
+        content: "“";
+        position: absolute;
+        font-size: 30px;
+        top: 20px;
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        margin: 10px 0px 0px 68px;
+      }
+    }
+    &__author {
+      max-width: 420px;
+      margin: 0px 0px 20px 0px;
+    }
+
+    &__author-card {
+      display: flex;
+      align-items: center;
+      margin: 0px 0px 40px 0px;
+      padding: 0px 0px 26px 0px;
+      border-bottom: 1px solid #000;
+      img {
+        width: 80px;
+        height: 80px;
+        margin: 0px 16px 0px 0px;
+        border-radius: 50%;
+      }
+      h2 {
+        margin: 0px 0px 16px 0px;
+      }
+    }
+    .home-author-card__contetn {
+      p {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 28px 0px;
+        font-size: 16px;
+      }
+      span {
+        font-weight: 700;
+      }
+      .full-post__social-network {
+        p {
+          display: flex;
+          justify-content: space-between;
+          margin: 0px 0px 30px 0px;
+          font-size: 16px;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

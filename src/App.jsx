@@ -9,6 +9,8 @@ import "./App.scss";
 import Magazine from "./pages/Magazine";
 import Podcast from "./pages/Podcast";
 import Authors from "./pages/Authors";
+import FullMagazine from "./pages/FullMagazine";
+import FullAuthors from "./pages/FullAuthors";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/magazine' element={<Magazine />}></Route>
+          <Route path='/full-post' element={<FullMagazine/>}></Route>
+          <Route path='/full-author' element={<FullAuthors/>}></Route>
           <Route path='/podcast' element={<Podcast />}></Route>
           <Route path='/authors' element={<Authors />}></Route>
         </Routes>

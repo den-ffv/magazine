@@ -4,7 +4,7 @@ import bigPost from '../../img/big-post.png'
 import { Link } from "react-router-dom";
 function BigPost() {
   return (
-    <Link to={"/fullpost"}>
+    <Link to={"/full-post"}>
       <div className='big-post'>
         <div className='big-post__conteiner'>
           <div className='big-post__content'>

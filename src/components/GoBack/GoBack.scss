@@ -1,0 +1,23 @@
+.go-back {
+  display: flex;
+  flex-wrap:wrap ;
+  justify-content: space-between;
+  align-items: center;
+  margin: 19px 0px 0px 0px;
+  &__button {
+    img {
+      margin: 0 12px 0 4px;
+      transform: rotate(-0.5turn);
+    }
+  }
+  &__img {
+    max-width: 165px;
+  }
+}
+@media(max-width: 670px){
+  .go-back {
+    &__img {
+      max-width: 105px;
+    }
+  }
+}

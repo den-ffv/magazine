@@ -1,0 +1,130 @@
+.full-podcast {
+  margin: 0px 0px 190px 0px;
+  &__text-content {
+    margin: 110px 0 0 0;
+  }
+  &__text-conteinrt {
+    max-width: 754px;
+  }
+  &__author {
+    max-width: 350px;
+    min-width: 300px;
+    margin: 0px 91px 0px 160px;
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px 0px 10px 0px;
+      span {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 160%;
+      }
+    }
+  }
+  &__author-img {
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
+  &__author-card {
+    border-bottom: 1px solid #000;
+    margin: 0px 0px 30px 0px;
+    padding: 0px 0px 40px 0px;
+  }
+  &__text-content {
+    justify-content: start;
+  }
+  &__title {
+    font-size: 100px;
+    line-height: 100%;
+    margin: 18px 0px 30px 0px;
+  }
+  &__paragraph {
+    font-size: 22px;
+    line-height: 180%;
+    padding: 0px 0px 65px 0px;
+  }
+}
+@media(max-width: 1160px){
+  .full-podcast {
+    &__text-content {
+      margin: 50px 0 0 0;
+    }
+    &__text-conteinrt {
+      max-width: 754px;
+    }
+    &__author {
+      max-width: 350px;
+      min-width: 300px;
+      margin: 0px 31px 0px 50px;
+      p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 0px 10px 0px;
+        span {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 160%;
+        }
+      }
+    }
+    &__author-img {
+      width: 100%;
+      margin: 0px 0px 30px 0px;
+    }
+    &__author-card {
+      border-bottom: 1px solid #000;
+      margin: 0px 0px 30px 0px;
+      padding: 0px 0px 40px 0px;
+    }
+    &__title {
+      font-size: 60px;
+      margin: 18px 0px 20px 0px;
+    }
+    &__paragraph {
+      padding: 0px 0px 35px 0px;
+    }
+  }
+}
+@media(max-width: 660px){
+  .full-podcast {
+    &__text-content {
+      margin: 20px 0 0 0;
+    }
+    &__text-conteinrt {
+      max-width: 640px;
+      margin: 30px 0px 0px 0px;
+    }
+    &__author {
+      max-width: 350px;
+      min-width: 300px;
+      margin: 0px 31px 0px 30px;
+      p {
+        margin: 0px 0px 10px 0px;
+        span {
+     
+          font-size: 16px;
+      
+        }
+      }
+    }
+    &__author-img {
+      width: 100%;
+      margin: 0px 0px 15px 0px;
+    }
+    &__author-card {
+      border-bottom: 1px solid #000;
+      margin: 0px 0px 15px 0px;
+      padding: 0px 0px 15px 0px;
+    }
+    &__title {
+      font-size: 45px;
+      margin: 18px 0px 20px 0px;
+    }
+    &__paragraph {
+      font-size: 16px;
+      padding: 0px 0px 35px 0px;
+    }
+  }
+}

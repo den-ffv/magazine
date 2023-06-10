@@ -4,6 +4,9 @@ import MagazinPost from "../components/MagazinePost/MagazinePost";
 import ButtonAll from "../components/ButtonAll/ButtonAll";
 
 function Magazine() {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <div className='wrapper'>
       <div>

@@ -5,7 +5,8 @@ import authorsImg from "../img/authors.svg";
 import instagram from "../img/instagram.svg";
 import twitter from "../img/twitter.svg";
 import youtube from "../img/youtube.svg";
-import "./FullAuthors.scss"
+import "./FullAuthors.scss";
+import HomeAuthor from "../components/HomeAuthor/HomeAuthor";
 function FullAuthors() {
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -81,9 +82,21 @@ function FullAuthors() {
            
           </div>
           <div className='home-podcast__conteiner'>
-          
+          <HomeAuthor/>
+          <HomeAuthor/>
           </div>
         </div> */}
+      <div className='home-podcast home-authors'>
+        <div className='home-podcast__content home-authors__content'>
+          <h2 className='big-title'>Articles by Louise Jensen</h2>
+        </div>
+        <div className='home-authors__conteiner'>
+          <HomeAuthor />
+          <HomeAuthor />
+          <HomeAuthor />
+          <HomeAuthor />
+        </div>
+      </div>
     </div>
   );
 }

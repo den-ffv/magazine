@@ -11,6 +11,7 @@ import Podcast from "./pages/Podcast";
 import Authors from "./pages/Authors";
 import FullMagazine from "./pages/FullMagazine";
 import FullAuthors from "./pages/FullAuthors";
+import FullPodcast from "./pages/FullPodcast";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/magazine' element={<Magazine />}></Route>
           <Route path='/full-post' element={<FullMagazine/>}></Route>
           <Route path='/full-author' element={<FullAuthors/>}></Route>
+          <Route path='/full-podcast' element={<FullPodcast/>}></Route>
           <Route path='/podcast' element={<Podcast />}></Route>
           <Route path='/authors' element={<Authors />}></Route>
         </Routes>

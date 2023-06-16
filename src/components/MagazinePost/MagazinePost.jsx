@@ -1,40 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./MagazinePost.scss";
-import homePost from "../../img/home-post.png";
-function MagazinPost() {
+import { formatDate } from '../../utils/dateProcessing';
+import { calculateReadingTime } from "../../utils/readingTime";
+function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
+  const {id} = useParams()
+  console.log(id)
   return (
-    <Link to={"/full-post"}>
+    <Link to={`/full-post/${idPost}`}>
       <div className='magazine-post-conteiter'>
         <div className='text-content__information-post home-post-information-post'>
           <div>
             <p>
-              <span>Date</span>16. March 2022
+              <span>Date</span>{formatDate(dayOfCreation)}
             </p>
           </div>
           <div>
-            <p className='text-content__tag'>art</p>
+            <p className='text-content__tag'>{tag}</p>
           </div>
         </div>
-        <img src={homePost} alt='img home post' />
+        <img src={`../../uploads/${img}`} alt='img home post' />
         <div>
           <div>
-            <h2 className='home-post__title'>Hope dies last</h2>
+            <h2 className='home-post__title'>{title}</h2>
             <p className='home-post__paragraph text-content__paragraph'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui
-              vivamus arcu felis bibendum ut. Porttitor leo a diam.
+              {introduction}
             </p>
           </div>
           <div className='text-content__information-post home-post-information-post'>
             <div>
               <p>
-                <span>Text</span>Jakob Gronberg
+                <span>Text</span>{postAuthor}
               </p>
             
               <p>
-                <span>Duration</span>1 Min
+                <span>Duration</span>{} Min
               </p>
             </div>
           </div>

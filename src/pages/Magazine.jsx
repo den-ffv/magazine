@@ -3,7 +3,7 @@ import magazineImg from "../img/magazine.svg";
 import MagazinPost from "../components/MagazinePost/MagazinePost";
 import ButtonAll from "../components/ButtonAll/ButtonAll";
 
-function Magazine() {
+function Magazine({ data }) {
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -30,28 +30,23 @@ function Magazine() {
         </div>
       </div>
       <div className='magazine-posts-wrapper'>
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
-        <MagazinPost />
+        {data.map((post) => (
+          <MagazinPost
+            key={post.id}
+            idPost={post.id}
+            img={post.image}
+            title={post.title}
+            introduction={post.introduction}
+            text={post.text}
+            tag={post.tag}
+            postAuthor={post.author.fullName}
+            dayOfCreation={post.createdAt}
+          />
+        ))}
       </div>
       {/* <div className="magazine__next-btn"> next <img src="" alt="" /></div> */}
       <div className='magazine-next-btn'>
-        <ButtonAll to={"authors"} text={"next"} />
+        <ButtonAll to={""} text={"next"} />
       </div>
     </div>
   );

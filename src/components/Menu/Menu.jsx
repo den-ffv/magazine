@@ -17,8 +17,8 @@ function Meun({logo ,items, active, setActive}) {
           </Link>
         </div>
         <ul className='menu__ul'>
-          {items.map(item => 
-            <li className='menu__list'><Link to={item.href}>{item.value}</Link></li>
+          {items.map((item, index) => 
+            <li key={index} className='menu__list'><Link to={item.href}>{item.value}</Link></li>
           ) }
         </ul>
         <div className='menu__social-network'>

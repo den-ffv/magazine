@@ -15,7 +15,7 @@ function PodcastCard() {
         </h2>
       </div>
       <div className='author__contetn'>
-        <div class='text-content__information-post podcast__information-post'>
+        <div className='text-content__information-post podcast__information-post'>
           <p>
             <span>Date</span>16. March 2022
           </p>

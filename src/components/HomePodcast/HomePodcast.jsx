@@ -10,7 +10,7 @@ function HomePodcast() {
         <h2 className='home-post__title home-podcast-card__title'>
           The hidden messages of Jack Nielson
         </h2>
-        <div class='text-content__information-post home-post-information-post'>
+        <div className='text-content__information-post home-post-information-post'>
           <div>
             <p>
               <span>Date</span>16.06.2022

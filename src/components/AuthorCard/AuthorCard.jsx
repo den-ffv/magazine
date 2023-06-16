@@ -1,27 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./AuthorCard.scss";
-import author from "../../img/author.jpg";
 import ButtonAll from "../ButtonAll/ButtonAll";
 
-function AuthorCard() {
+function AuthorCard({ userName, userIcon, job, city, idPost}) {
+  const {id} = useParams()
   return (
     <div className='author'>
       <div className='author__wrapepr'>
-        <img className='author__img' src={author} alt='author' />
+        <img className='author__img' src={`../uploads/usersIcon/${userIcon}`} alt='author' />
         <h2 className='home-post__title home-author-card__title'>
-          Jakob Grønberg
+          {userName}
         </h2>
       </div>
       <div className='author__contetn'>
-        <div class='text-content__information-post author__information-post'>
+        <div className='text-content__information-post author__information-post'>
           <p>
-            <span>Job</span>Artist
+            <span>Job</span>{job}
           </p>
           <p>
-            <span>City</span>Berlin
+            <span>City</span>{city}
           </p>
-          <ButtonAll to={"full-author"} text={"About"} />
+          <ButtonAll to={`full-author/${idPost}`} text={"About"} />
         </div>
       </div>
     </div>

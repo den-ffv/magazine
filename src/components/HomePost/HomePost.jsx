@@ -2,35 +2,35 @@ import React from "react";
 import "./HomePost.scss";
 import homePost from "../../img/home-post.png";
 import { Link } from "react-router-dom";
-function HomePost() {
+import { formatDate } from '../../utils/dateProcessing';
+import { calculateReadingTime } from "../../utils/readingTime";
+function HomePost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
+  console.log(idPost)
   return (
-    <Link to={"/full-post"}>
+    <Link to={"/full-post/:id"}>
       <div className='home-post-conteiter'>
-        <img src={homePost} alt='img home post' />
+        <img src={`../uploads/${img}`} alt='img home post' />
         <div className='home-post-content'>
           <div>
-            <h2 className='home-post__title'>Hope dies last</h2>
+            <h2 className='home-post__title'>{title}</h2>
             <p className='home-post__paragraph text-content__paragraph'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui
-              vivamus arcu felis bibendum ut. Porttitor leo a diam.
+              {introduction}
             </p>
           </div>
           <div className='text-content__information-post home-post-information-post'>
             <div>
               <p>
-                <span>Text</span>Jakob Gronberg
+                <span>Text</span>{postAuthor}
               </p>
               <p>
-                <span>Date</span>16. March 2022
+                <span>Date</span>{formatDate(dayOfCreation)}
               </p>
               <p>
-                <span>Read</span>1 Min
+                <span>Read</span>{calculateReadingTime(text)} Min
               </p>
             </div>
             <div>
-              <p className='text-content__tag'>art</p>
+              <p className='text-content__tag'>{tag}</p>
             </div>
           </div>
         </div>

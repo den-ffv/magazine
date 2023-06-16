@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
 import magazineImg from "../img/magazine.svg";
@@ -13,8 +13,24 @@ import "./FullMagazine.scss";
 import ButtonAll from "../components/ButtonAll/ButtonAll";
 import MagazinPost from "../components/MagazinePost/MagazinePost";
 import GoBack from "../components/GoBack/GoBack";
+import axios from "axios";
 
-function FullMagazine() {
+function FullMagazine({data}) {
+  const [post, setPost] = useState(null);
+console.log(post )
+  useEffect(() => {
+    fetchPost();
+  }, []);
+
+  const fetchPost = async () => {
+    try {
+      const response = await axios.get('https://6484ab9aee799e321626e8e2.mockapi.io/data');
+      const postData = response.data;
+      setPost(postData);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -59,7 +75,7 @@ function FullMagazine() {
         <img className='full-post__img' src={homePost} alt='full-post img' />
         <div className='full-post__text-content'>
           <div className='full-post__author'>
-            <Link to={"/full-author"}>
+            <Link to={"/full-author/:id"}>
               <div className='full-post__author-card'>
                 <img src={author} alt='author' />
                 <h2 className='home-post__title home-author-card__title'>

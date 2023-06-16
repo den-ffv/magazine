@@ -76,16 +76,6 @@ function FullAuthors() {
           </p>
         </div>
       </div>
-      {/* <div className='home-podcast'>
-          <div className='home-podcast__content'>
-            <h2 className='big-title'>Articles by Louise Jensen</h2>
-           
-          </div>
-          <div className='home-podcast__conteiner'>
-          <HomeAuthor/>
-          <HomeAuthor/>
-          </div>
-        </div> */}
       <div className='home-podcast home-authors'>
         <div className='home-podcast__content home-authors__content'>
           <h2 className='big-title'>Articles by Louise Jensen</h2>

@@ -27,8 +27,8 @@ function Header() {
             </Link>
           </div>
           <nav className='header-nav'>
-            {items.map((item) => (
-              <li className='header-nav__list'>
+            {items.map((item, index) => (
+              <li key={index} className='header-nav__list'>
                 <Link to={item.href}>{item.value}</Link>
               </li>
             ))}
@@ -58,8 +58,8 @@ function Header() {
           {/* <div className='menu__button'>
             <button onClick={() => setMenuActive(!menuActive)}>open</button>
           </div> */}
-          <div class={!menuActive ? 'menu-icon': 'menu-icon active'}>
-            <input onClick={() => setMenuActive(!menuActive)} class='menu-icon__cheeckbox' type='checkbox' />
+          <div className={!menuActive ? 'menu-icon': 'menu-icon active'}>
+            <input onClick={() => setMenuActive(!menuActive)} className='menu-icon__cheeckbox' type='checkbox' />
             <div>
               <span></span>
               <span></span>

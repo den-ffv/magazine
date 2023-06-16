@@ -2,35 +2,34 @@ import React from "react";
 import "./BigPost.scss";
 import bigPost from '../../img/big-post.png'
 import { Link } from "react-router-dom";
-function BigPost() {
+import { formatDate } from '../../utils/dateProcessing';
+import { calculateReadingTime } from "../../utils/readingTime";
+function BigPost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
   return (
-    <Link to={"/full-post"}>
+    <Link to={"/full-post/:id"}>
       <div className='big-post'>
         <div className='big-post__conteiner'>
           <div className='big-post__content'>
           
-              <h1 className="big-title">Don’t close your eyes</h1>
+              <h1 className="big-title">{title}</h1>
             
             <div className="text-content">
               <p className="text-content__paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui
-                vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                {introduction}
               </p>
               <div className="text-content__information-post">
                 <div>
-                  <p><span>Text</span>Jakob Gronberg</p>
-                  <p><span>Date</span>16. March 2022</p>
-                  <p><span>Duration</span>1 Min</p>
+                  <p><span>Text</span>{postAuthor}</p>
+                  <p><span>Date</span>{formatDate(dayOfCreation)}</p>
+                  <p><span>Duration</span>{calculateReadingTime(text)} Min</p>
                 </div>
                 <div>
-                  <p className="text-content__tag">Label</p>
+                  <p className="text-content__tag">{tag}</p>
                 </div>
               </div>
             </div>
           </div>
-          <img className='big-post__img'src={bigPost} alt="img big post" />
+          <img className='big-post__img'src={`../uploads/${img}`} alt="img big post" />
         </div>
       </div>
     </Link>

@@ -19,7 +19,7 @@ function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCrea
             <p className='text-content__tag'>{tag}</p>
           </div>
         </div>
-        <img src={`../../uploads/${img}`} alt='img home post' />
+        <img src={`..//uploads/${img}`} alt='img home post' />
         <div>
           <div>
             <h2 className='home-post__title'>{title}</h2>

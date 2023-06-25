@@ -9,7 +9,7 @@ function HomePost({img, title, introduction, text, tag, postAuthor, dayOfCreatio
   return (
     <Link to={"/full-post/:id"}>
       <div className='home-post-conteiter'>
-        <img src={`../uploads/${img}`} alt='img home post' />
+        <img src={`/uploads/${img}`} alt='img home post' />
         <div className='home-post-content'>
           <div>
             <h2 className='home-post__title'>{title}</h2>

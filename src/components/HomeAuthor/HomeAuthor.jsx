@@ -5,7 +5,7 @@ function HomeAuthor({ userName, userIcon, job, city}) {
   return (
         <Link to={"/full-author/:id"}>
     <div className='home-author-card'>
-        <img src={`../uploads/usersIcon/${userIcon}`} alt='author' />
+        <img src={`/uploads/usersIcon/${userIcon}`} alt='author' />
         <div className='home-author-card__contetn'>
           <h2 className='home-post__title home-author-card__title'>
             {userName}

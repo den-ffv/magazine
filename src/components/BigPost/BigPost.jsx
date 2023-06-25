@@ -29,7 +29,7 @@ function BigPost({img, title, introduction, text, tag, postAuthor, dayOfCreation
               </div>
             </div>
           </div>
-          <img className='big-post__img'src={`../uploads/${img}`} alt="img big post" />
+          <img className='big-post__img'src={`/uploads/${img}`} alt="img big post" />
         </div>
       </div>
     </Link>

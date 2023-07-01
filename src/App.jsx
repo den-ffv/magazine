@@ -49,8 +49,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home data={data} authors={authors}/>}></Route>
           <Route path='/magazine' element={<Magazine data={data} />}></Route>
-          <Route path='/full-post/:id' element={<FullMagazine data={data} />}></Route>
-          <Route path='/full-author/:id' element={<FullAuthors />}></Route>
+          <Route path='/full-post' element={<FullMagazine data={data} />}></Route>
+          <Route path='/full-author' element={<FullAuthors />}></Route>
           <Route path='/full-podcast' element={<FullPodcast />}></Route>
           <Route path='/podcast' element={<Podcast />}></Route>
           <Route path='/authors' element={<Authors authors={authors} />}></Route>

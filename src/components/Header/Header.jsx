@@ -55,16 +55,12 @@ function Header() {
               </li>
             </div>
           </nav>
-          {/* <div className='menu__button'>
-            <button onClick={() => setMenuActive(!menuActive)}>open</button>
-          </div> */}
-          <div className={!menuActive ? 'menu-icon': 'menu-icon active'}>
-            <input onClick={() => setMenuActive(!menuActive)} className='menu-icon__cheeckbox' type='checkbox' />
-            <div>
+          {/* <div className={!menuActive ? 'menu-icon': 'menu-icon active'}> */}
+            <div onClick={() => setMenuActive(!menuActive)} className={menuActive ? 'menu-icon menu-icon-active' : 'menu-icon'}>
               <span></span>
               <span></span>
             </div>
-          </div>
+          {/* </div> */}
         </header>
       </div>
       <Menu

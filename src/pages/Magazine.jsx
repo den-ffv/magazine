@@ -44,7 +44,6 @@ function Magazine({ data }) {
           />
         ))}
       </div>
-      {/* <div className="magazine__next-btn"> next <img src="" alt="" /></div> */}
       <div className='magazine-next-btn'>
         <ButtonAll to={""} text={"next"} />
       </div>

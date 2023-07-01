@@ -13,28 +13,11 @@ import "./FullMagazine.scss";
 import ButtonAll from "../components/ButtonAll/ButtonAll";
 import MagazinPost from "../components/MagazinePost/MagazinePost";
 import GoBack from "../components/GoBack/GoBack";
-import axios from "axios";
 
 function FullMagazine({data}) {
-  const [post, setPost] = useState(null);
-console.log(post )
-  useEffect(() => {
-    fetchPost();
-  }, []);
-
-  const fetchPost = async () => {
-    try {
-      const response = await axios.get('https://6484ab9aee799e321626e8e2.mockapi.io/data');
-      const postData = response.data;
-      setPost(postData);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
-
   return (
     <div className='wrapper'>
       <GoBack
@@ -206,9 +189,19 @@ console.log(post )
             <ButtonAll to={"magazine"} text={"See all"} />
           </div>
           <div className='home-podcast__conteiner'>
-            <MagazinPost />
-            <MagazinPost />
-            <MagazinPost />
+          {data.slice(0, 3).map((post) => (
+          <MagazinPost
+            key={post.id}
+            idPost={post.id}
+            img={post.image}
+            title={post.title}
+            introduction={post.introduction}
+            text={post.text}
+            tag={post.tag}
+            postAuthor={post.author.fullName}
+            dayOfCreation={post.createdAt}
+          />
+        ))}
           </div>
         </div>
       </div>

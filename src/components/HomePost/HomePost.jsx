@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
 function HomePost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
-  console.log(idPost)
   return (
-    <Link to={"/full-post/:id"}>
+    <Link to={"/full-post"}>
       <div className='home-post-conteiter'>
         <img src={`/uploads/${img}`} alt='img home post' />
         <div className='home-post-content'>

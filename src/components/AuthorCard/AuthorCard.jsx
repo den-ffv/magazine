@@ -4,7 +4,6 @@ import "./AuthorCard.scss";
 import ButtonAll from "../ButtonAll/ButtonAll";
 
 function AuthorCard({ userName, userIcon, job, city, idPost}) {
-  const {id} = useParams()
   return (
     <div className='author'>
       <div className='author__wrapepr'>

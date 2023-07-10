@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 import magazineImg from "../img/magazine.svg";
 import arroy from "../img/arroy.svg";
@@ -13,11 +13,43 @@ import "./FullMagazine.scss";
 import ButtonAll from "../components/ButtonAll/ButtonAll";
 import MagazinPost from "../components/MagazinePost/MagazinePost";
 import GoBack from "../components/GoBack/GoBack";
+import axios from "axios";
 
-function FullMagazine({data}) {
-  React.useEffect(() => {
+function FullMagazine({ morePosts }) {
+
+
+  const [posts, setPosts] = useState(null);
+  const [authors, setAuthors] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
     window.scrollTo({ top: 0 });
+    fetchData();
   }, []);
+
+  const fetchData = async () => {
+    try {
+      const [postsResponse, authorsResponse] = await Promise.all([
+        axios.get(`https://6484ab9aee799e321626e8e2.mockapi.io/data/${id}`),
+        axios.get(`https://6484ab9aee799e321626e8e2.mockapi.io/users`),
+      ]);
+      const [postsData, authorsData] = await Promise.all([
+        postsResponse.data,
+        authorsResponse.data,
+      ]);
+      const combinedData = () =>  {
+        const author = authorsData.find((author) => author.id === postsData.author.id);
+        return { ...postsData , author };
+      };
+
+      setPosts(combinedData);
+      setAuthors(authorsData);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+  console.log(posts.title)
+
   return (
     <div className='wrapper'>
       <GoBack
@@ -28,7 +60,7 @@ function FullMagazine({data}) {
       <div className='full-post'>
         <div className='big-post__content full-post__content'>
           <h1 className='big-title full-post__title'>
-            Hope <br /> dies last
+            Hope <br /> dies last 
           </h1>
           <p className='text-content__paragraph full-post__paragraph'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -189,19 +221,19 @@ function FullMagazine({data}) {
             <ButtonAll to={"magazine"} text={"See all"} />
           </div>
           <div className='home-podcast__conteiner'>
-          {data.slice(0, 3).map((post) => (
-          <MagazinPost
-            key={post.id}
-            idPost={post.id}
-            img={post.image}
-            title={post.title}
-            introduction={post.introduction}
-            text={post.text}
-            tag={post.tag}
-            postAuthor={post.author.fullName}
-            dayOfCreation={post.createdAt}
-          />
-        ))}
+            {morePosts.slice(0, 3).map((post) => (
+              <MagazinPost
+                key={post.id}
+                idPost={post.id}
+                img={post.image}
+                title={post.title}
+                introduction={post.introduction}
+                text={post.text}
+                tag={post.tag}
+                postAuthor={post.author.fullName}
+                dayOfCreation={post.createdAt}
+              />
+            ))}
           </div>
         </div>
       </div>

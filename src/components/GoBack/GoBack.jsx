@@ -1,16 +1,19 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import arroy from "../../img/arroy.svg";
-import "./GoBack.scss"
+import "./GoBack.scss";
 
 function GoBack({ linkTo, goBackImg, goBackImgAlt }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const handelGoBack = () => {
+    navigate(-1)
+  }
   return (
     <div className='go-back'>
-      <Link className='button-all go-back__button' to={navigate(-1)}>
+      <button className='button-all go-back__button' onClick={handelGoBack}>
         <img src={arroy} alt='arroy' />
         go back
-      </Link>
+      </button>
       <dir>
         <img className='go-back__img' src={goBackImg} alt={`${goBackImgAlt}`} />
       </dir>

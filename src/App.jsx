@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
@@ -12,7 +13,6 @@ import FullAuthors from "./pages/FullAuthors";
 import FullPodcast from "./pages/FullPodcast";
 
 function App() {
-
   const [posts, setPosts] = useState([]);
   const [authors, setAuthors] = useState([]);
 
@@ -23,15 +23,15 @@ function App() {
   const fetchData = async () => {
     try {
       const [postsResponse, authorsResponse] = await Promise.all([
-        fetch("https://6484ab9aee799e321626e8e2.mockapi.io/data"),
-        fetch("https://6484ab9aee799e321626e8e2.mockapi.io/users"),
+        axios.get("https://6484ab9aee799e321626e8e2.mockapi.io/data"),
+        axios.get("https://6484ab9aee799e321626e8e2.mockapi.io/users"),
       ]);
       const [postsData, authorsData] = await Promise.all([
-        postsResponse.json(),
-        authorsResponse.json(),
+        postsResponse.data,
+        authorsResponse.data,
       ]);
       const combinedData = postsData.map((post) => {
-        const author = authorsData.find((author) => author.user === post.author.user);
+        const author = authorsData.find((author) => author.id === author.id);
         return { ...post, author };
       });
 
@@ -42,6 +42,7 @@ function App() {
     }
   };
   const data = posts;
+  
   return (
     <div className='App'>
       <Header />
@@ -49,7 +50,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home data={data} authors={authors}/>}></Route>
           <Route path='/magazine' element={<Magazine data={data} />}></Route>
-          <Route path='/full-post' element={<FullMagazine data={data} />}></Route>
+          <Route path='/full-post/:id' element={<FullMagazine morePosts={data} />}></Route>
           <Route path='/full-author' element={<FullAuthors />}></Route>
           <Route path='/full-podcast' element={<FullPodcast />}></Route>
           <Route path='/podcast' element={<Podcast />}></Route>

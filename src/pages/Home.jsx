@@ -13,7 +13,9 @@ import HomePodcast from "../components/HomePodcast/HomePodcast";
 import HomeAuthor from "../components/HomeAuthor/HomeAuthor";
 
 function Home({ data, authors }) {
-
+  React.useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <>
       <div className='wrapper'>
@@ -33,7 +35,7 @@ function Home({ data, authors }) {
             introduction={post.introduction}
             text={post.text}
             tag={post.tag}
-            postAuthor={post.author.fullName}
+            postAuthor={post.author.userName}
             dayOfCreation={post.createdAt}
           />
         ))}
@@ -48,7 +50,7 @@ function Home({ data, authors }) {
                 introduction={post.introduction}
                 text={post.text}
                 tag={post.tag}
-                postAuthor={post.author.fullName}
+                postAuthor={post.author.userName}
                 dayOfCreation={post.createdAt}
               />
             ))}
@@ -83,8 +85,8 @@ function Home({ data, authors }) {
           <div className='home-authors__conteiner'>
             {authors.map((author) => (
               <HomeAuthor
-                key={author.user}
-                userName={author.fullName}
+                key={author.id}
+                userName={author.userName}
                 userIcon={author.userIcon}
                 job={author.job}
                 city={author.city}

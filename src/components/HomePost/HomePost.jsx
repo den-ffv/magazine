@@ -1,12 +1,11 @@
 import React from "react";
 import "./HomePost.scss";
-import homePost from "../../img/home-post.png";
 import { Link } from "react-router-dom";
 import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
 function HomePost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
   return (
-    <Link to={"/full-post"}>
+    <Link to={`/full-post/${idPost}`}>
       <div className='home-post-conteiter'>
         <img src={`/uploads/${img}`} alt='img home post' />
         <div className='home-post-content'>

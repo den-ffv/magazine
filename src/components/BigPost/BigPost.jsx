@@ -6,7 +6,7 @@ import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
 function BigPost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
   return (
-    <Link to={"/full-post"}>
+    <Link to={`/full-post/${idPost}`}>
       <div className='big-post'>
         <div className='big-post__conteiner'>
           <div className='big-post__content'>

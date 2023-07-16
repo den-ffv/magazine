@@ -42,8 +42,6 @@ function FullMagazine({ morePosts }) {
       console.error("Error:", error);
     }
   };
-  console.log(posts);
-  console.log(authors);
 
 
   return (
@@ -58,8 +56,6 @@ function FullMagazine({ morePosts }) {
           <Loaders/>
         ) : (
           <>
-            {/* <p>{posts.title}</p> */}
-
             <div className='big-post__content full-post__content'>
               <h1 className='big-title full-post__title'>{posts.title}</h1>
               <p className='text-content__paragraph full-post__paragraph'>
@@ -87,7 +83,7 @@ function FullMagazine({ morePosts }) {
             </div>
             <img
               className='full-post__img'
-              src={`/public/uploads/${posts.image}`}
+              src={`/uploads/${posts.image}`}
               alt='full-post img'
             />
             <div className='full-post__text-content'>
@@ -95,7 +91,7 @@ function FullMagazine({ morePosts }) {
                 <Link to={"/full-author/:id"}>
                   <div className='full-post__author-card'>
                     <img
-                      src={`/public/uploads/usersIcon/${posts.author.userIcon}`}
+                      src={`/uploads/usersIcon/${posts.author.userIcon}`}
                       alt='author'
                     />
                     <h2 className='home-post__title home-author-card__title'>

@@ -5,7 +5,6 @@ import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
 function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
   const {id} = useParams()
-  console.log(id)
   return (
     <Link to={`/full-post/${idPost}`}>
       <div className='magazine-post-conteiter'>
@@ -19,7 +18,7 @@ function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCrea
             <p className='text-content__tag'>{tag}</p>
           </div>
         </div>
-        <img src={`../../../public/uploads/${img}`} alt='img home post' />
+        <img src={`/uploads/${img}`} alt='img home post' />
         <div>
           <div>
             <h2 className='home-post__title'>{title}</h2>

@@ -33,7 +33,7 @@ function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCrea
               </p>
             
               <p>
-                <span>Duration</span>{} Min
+                <span>Duration</span>{calculateReadingTime(text)} Min
               </p>
             </div>
           </div>

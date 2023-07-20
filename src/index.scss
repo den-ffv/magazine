@@ -1,6 +1,12 @@
 // Regular 400
 // Medium 500
 // Bold 700
+*{
+  &::selection {
+    background: #8d8d8d6c;
+    }
+  cursor: url("../cursor.svg")2 2, pointer;
+}
 
 body{
   font-family: 'DM Sans', sans-serif;

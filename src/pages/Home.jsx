@@ -35,7 +35,7 @@ function Home({ data, authors }) {
             introduction={post.introduction}
             text={post.text}
             tag={post.tag}
-            postAuthor={post.author.userName}
+            postAuthor={post.author.userName}  
             dayOfCreation={post.createdAt}
           />
         ))}

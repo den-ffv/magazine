@@ -16,7 +16,7 @@ function Authors({ authors }) {
           <AuthorCard
             key={author.user}
             idPost={author.id}
-            userName={author.fullName}
+            userName={author.userName}
             userIcon={author.userIcon}
             job={author.job}
             city={author.city}

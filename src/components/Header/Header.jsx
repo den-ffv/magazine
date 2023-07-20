@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
 
 import logo from "../../assets/fyrre_magazine.svg";
@@ -29,7 +29,7 @@ function Header() {
           <nav className='header-nav'>
             {items.map((item, index) => (
               <li key={index} className='header-nav__list'>
-                <Link to={item.href}>{item.value}</Link>
+                <NavLink to={item.href}>{item.value}</NavLink>
               </li>
             ))}
             <div className='social-network'>

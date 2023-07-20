@@ -31,7 +31,7 @@ function App() {
         authorsResponse.data,
       ]);
       const combinedData = postsData.map((post) => {
-        const author = authorsData.find((author) => author.id === author.id);
+        const author = authorsData.find((author) =>  author.id == post.author.id);
         return { ...post, author };
       });
 
@@ -42,6 +42,7 @@ function App() {
     }
   };
   const data = posts;
+  console.log(data)
   
   return (
     <div className='App'>

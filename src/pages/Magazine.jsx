@@ -6,11 +6,11 @@ import Loaders from "../components/Loaders/Loaders";
 
 function Magazine({ data }) {
   const [sortTag, setSortTag] = useState(data);
-  console.log(sortTag);
+  console.log(data)
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
-
+5
   const tag = [];
   data.map((e) => tag.push(e.tag));
   const uniqueTag = tag.filter(function (item, position, array) {
@@ -51,7 +51,7 @@ function Magazine({ data }) {
         </div>
       </div>
       <div className='magazine-posts-wrapper'>
-        {!sortPost ? (
+        {!data ? (
           <Loaders />
         ) : (
           sortTag.map((post) => (
@@ -63,7 +63,7 @@ function Magazine({ data }) {
               introduction={post.introduction}
               text={post.text}
               tag={post.tag}
-              postAuthor={post.author.fullName}
+              postAuthor={post.author.userName}
               dayOfCreation={post.createdAt}
             />
           ))

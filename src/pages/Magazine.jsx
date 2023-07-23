@@ -6,7 +6,6 @@ import Loaders from "../components/Loaders/Loaders";
 
 function Magazine({ data }) {
   const [sortTag, setSortTag] = useState(data);
-  console.log(data)
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);

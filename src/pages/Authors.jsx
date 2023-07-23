@@ -14,7 +14,7 @@ function Authors({ authors }) {
       <div className='authors-page-wrapper'>
         {authors.map((author) => (
           <AuthorCard
-            key={author.user}
+            key={author.id}
             idPost={author.id}
             userName={author.userName}
             userIcon={author.userIcon}

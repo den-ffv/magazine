@@ -1,9 +1,9 @@
 import React from "react";
 import "./HomeAuthor.scss";
 import { Link } from "react-router-dom";
-function HomeAuthor({ userName, userIcon, job, city}) {
+function HomeAuthor({ idAuthor,userName, userIcon, job, city}) {
   return (
-        <Link to={"/full-author/:id"}>
+        <Link to={`/full-author/${idAuthor}`}>
     <div className='home-author-card'>
         <img src={`/uploads/usersIcon/${userIcon}`} alt='author' />
         <div className='home-author-card__contetn'>

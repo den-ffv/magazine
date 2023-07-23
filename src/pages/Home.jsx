@@ -86,6 +86,7 @@ function Home({ data, authors }) {
             {authors.map((author) => (
               <HomeAuthor
                 key={author.id}
+                idAuthor={author.id}
                 userName={author.userName}
                 userIcon={author.userIcon}
                 job={author.job}

@@ -4,7 +4,7 @@ import "./MagazinePost.scss";
 import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
 function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCreation, idPost }) {
-  const {id} = useParams()
+
   return (
     <Link to={`/full-post/${idPost}`}>
       <div className='magazine-post-conteiter'>

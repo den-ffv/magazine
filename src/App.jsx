@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
@@ -11,52 +10,11 @@ import Authors from "./pages/Authors";
 import FullMagazine from "./pages/FullMagazine";
 import FullAuthors from "./pages/FullAuthors";
 import FullPodcast from "./pages/FullPodcast";
-
-const toWebpFileName = (fileName) => fileName?.replace(/\.(png|jpe?g|svg)$/i, ".webp") ?? fileName;
+import siteData from "./data/mockapi.json";
 
 function App() {
-  const [posts, setPosts] = useState([]);
-  const [authors, setAuthors] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const [postsResponse, authorsResponse] = await Promise.all([
-        axios.get("https://6484ab9aee799e321626e8e2.mockapi.io/data"),
-        axios.get("https://6484ab9aee799e321626e8e2.mockapi.io/users"),
-      ]);
-      const [postsData, authorsData] = await Promise.all([
-        postsResponse.data,
-        authorsResponse.data,
-      ]);
-
-      const optimizedAuthors = authorsData.map((author) => ({
-        ...author,
-        userIcon: toWebpFileName(author.userIcon),
-      }));
-
-      const combinedData = postsData.map((post) => {
-        const author = optimizedAuthors.find(
-          (item) => item.id == post.author.id,
-        );
-
-        return {
-          ...post,
-          image: toWebpFileName(post.image),
-          author,
-        };
-      });
-
-      setPosts(combinedData);
-      setAuthors(optimizedAuthors);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
-  const data = posts;
+  const data = siteData.posts;
+  const authors = siteData.authors;
   
   return (
     <div className='App'>

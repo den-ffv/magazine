@@ -1,6 +1,6 @@
 import React from "react";
 import GoBack from "../components/GoBack/GoBack";
-import podcastImgPleare from "../img/podcast-cover.jpg";
+import podcastImgPleare from "../img/podcast-cover.webp";
 import podcastImg from "../img/podcast.svg";
 import instagram from "../img/instagram.svg";
 import twitter from "../img/twitter.svg";
@@ -30,6 +30,10 @@ function FullPodcast() {
               className='full-podcast__author-img'
               src={podcastImgPleare}
               alt='author'
+              width='408'
+              height='408'
+              loading='eager'
+              decoding='async'
             />
             <div className='home-author-card__contetn'>
               <p>

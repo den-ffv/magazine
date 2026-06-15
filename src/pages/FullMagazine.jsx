@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import magazineImg from "../img/magazine.svg";
-import arroy from "../img/arroy.svg";
 import instagram from "../img/instagram.svg";
 import twitter from "../img/twitter.svg";
 import youtube from "../img/youtube.svg";
@@ -9,7 +8,6 @@ import "./FullMagazine.scss";
 import ButtonAll from "../components/ButtonAll/ButtonAll";
 import MagazinPost from "../components/MagazinePost/MagazinePost";
 import GoBack from "../components/GoBack/GoBack";
-import axios from "axios";
 import Loaders from "../components/Loaders/Loaders";
 import { formatDate } from '../utils/dateProcessing';
 import { calculateReadingTime } from '../utils/readingTime';
@@ -66,6 +64,10 @@ function FullMagazine({ morePosts  }) {
                   className='full-post__img'
                   src={`/uploads/${post.image}`}
                   alt='full-post img'
+                  width='407'
+                  height='407'
+                  loading='eager'
+                  decoding='async'
                 />
                 <div className='full-post__text-content'>
                   <div className='full-post__author'>

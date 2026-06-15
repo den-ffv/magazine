@@ -7,7 +7,15 @@ function AuthorCard({ userName, userIcon, job, city, idPost}) {
   return (
     <div className='author'>
       <div className='author__wrapepr'>
-        <img className='author__img' src={`/uploads/usersIcon/${userIcon}`} alt='author' />
+        <img
+          className='author__img'
+          src={`/uploads/usersIcon/${userIcon}`}
+          alt='author'
+          width='150'
+          height='151'
+          loading='lazy'
+          decoding='async'
+        />
         <h2 className='home-post__title home-author-card__title'>
           {userName}
         </h2>

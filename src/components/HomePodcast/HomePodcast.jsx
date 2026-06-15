@@ -1,12 +1,19 @@
 import React from "react";
 import "./HomePodcast.scss";
-import podcastImg from "../../img/podcast-cover.jpg";
+import podcastImg from "../../img/podcast-cover.webp";
 import { Link } from "react-router-dom";
 function HomePodcast() {
   return (
     <Link to={'/full-podcast'}>
       <div className='home-podcast-card'>
-        <img src={podcastImg} alt='' />
+        <img
+          src={podcastImg}
+          alt=''
+          width='408'
+          height='408'
+          loading='lazy'
+          decoding='async'
+        />
         <h2 className='home-post__title home-podcast-card__title'>
           The hidden messages of Jack Nielson
         </h2>

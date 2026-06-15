@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./PodcastCard.scss";
-import podcastImg from "../../img/podcast-cover.jpg";
+import podcastImg from "../../img/podcast-cover.webp";
 import ButtonAll from "../ButtonAll/ButtonAll";
 
 function PodcastCard() {
@@ -9,7 +9,15 @@ function PodcastCard() {
     <div className='author podcast'>
       <div className='author__wrapepr'>
         <p className='podcast__number'>04</p>
-        <img className='podcast__img' src={podcastImg} alt='author' />
+        <img
+          className='podcast__img'
+          src={podcastImg}
+          alt='author'
+          width='408'
+          height='408'
+          loading='lazy'
+          decoding='async'
+        />
         <h2 className='home-post__title podcast__title'>
           The hidden messages of Jack Nielson
         </h2>

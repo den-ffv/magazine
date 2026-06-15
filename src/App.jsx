@@ -12,6 +12,8 @@ import FullMagazine from "./pages/FullMagazine";
 import FullAuthors from "./pages/FullAuthors";
 import FullPodcast from "./pages/FullPodcast";
 
+const toWebpFileName = (fileName) => fileName?.replace(/\.(png|jpe?g|svg)$/i, ".webp") ?? fileName;
+
 function App() {
   const [posts, setPosts] = useState([]);
   const [authors, setAuthors] = useState([]);
@@ -30,13 +32,26 @@ function App() {
         postsResponse.data,
         authorsResponse.data,
       ]);
+
+      const optimizedAuthors = authorsData.map((author) => ({
+        ...author,
+        userIcon: toWebpFileName(author.userIcon),
+      }));
+
       const combinedData = postsData.map((post) => {
-        const author = authorsData.find((author) =>  author.id == post.author.id);
-        return { ...post, author };
+        const author = optimizedAuthors.find(
+          (item) => item.id == post.author.id,
+        );
+
+        return {
+          ...post,
+          image: toWebpFileName(post.image),
+          author,
+        };
       });
 
       setPosts(combinedData);
-      setAuthors(authorsData);
+      setAuthors(optimizedAuthors);
     } catch (error) {
       console.error("Error:", error);
     }

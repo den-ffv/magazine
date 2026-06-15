@@ -1,6 +1,5 @@
 import React from "react";
 import GoBack from "../components/GoBack/GoBack";
-import author from "../img/author.jpg";
 import authorsImg from "../img/authors.svg";
 import instagram from "../img/instagram.svg";
 import twitter from "../img/twitter.svg";
@@ -31,6 +30,10 @@ function FullAuthors({ authors }) {
                 <img
                   src={`/uploads/usersIcon/${author.userIcon}`}
                   alt='author'
+                  width='150'
+                  height='151'
+                  loading='eager'
+                  decoding='async'
                 />
               </div>
               <div className='home-author-card__contetn'>

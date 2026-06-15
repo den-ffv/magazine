@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./MagazinePost.scss";
 import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
@@ -18,7 +18,14 @@ function MagazinPost({img, title, introduction, text, tag, postAuthor, dayOfCrea
             <p className='text-content__tag'>{tag}</p>
           </div>
         </div>
-        <img src={`/uploads/${img}`} alt='img home post' />
+        <img
+          src={`/uploads/${img}`}
+          alt='img home post'
+          width='407'
+          height='407'
+          loading='lazy'
+          decoding='async'
+        />
         <div>
           <div>
             <h2 className='home-post__title'>{title}</h2>

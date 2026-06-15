@@ -1,6 +1,5 @@
 import React from "react";
 import "./BigPost.scss";
-import bigPost from '../../img/big-post.png'
 import { Link } from "react-router-dom";
 import { formatDate } from '../../utils/dateProcessing';
 import { calculateReadingTime } from "../../utils/readingTime";
@@ -29,7 +28,16 @@ function BigPost({img, title, introduction, text, tag, postAuthor, dayOfCreation
               </div>
             </div>
           </div>
-          <img className='big-post__img'src={`/uploads/${img}`} alt="img big post" />
+          <img
+            className='big-post__img'
+            src={`/uploads/${img}`}
+            alt='img big post'
+            width='407'
+            height='407'
+            loading='eager'
+            decoding='async'
+            fetchPriority='high'
+          />
         </div>
       </div>
     </Link>
